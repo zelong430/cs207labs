@@ -43,23 +43,7 @@ void free_all(Item* listptr) {
     }
 }
 
-Item* remove_item(Item* listptr, int value){
-    if(listptr == NULL){
-        return NULL;
-    }
-    Item* helper = new_item(0);
-    helper-> rest = listptr;
-    cur_ptr = helper -> rest;
-    while(cur_ptr != NULL){
-        if(cur_ptr -> value == value){
-            helper-> rest = cur_ptr -> rest;
-            return cur_ptr;
-        }
-        cur_ptr = cur_ptr -> rest;
-        helper = helper -> rest;
-    }
-    return NULL;
-}
+
 
 int main(){
     Item* listptr;
